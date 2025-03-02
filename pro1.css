@@ -1,0 +1,1032 @@
+
+@media (max-width: 991px){
+    .header{
+      visibility: hidden;
+      display:none;
+    }
+    body::-webkit-scrollbar{
+        display: none;
+    }
+    body {
+    margin: 0;
+    padding-bottom: 5rem;
+    
+    }
+
+    .navbar {
+    overflow: hidden;
+    display: flex;
+    background-color: #602147;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    height:60px;
+    align-items: center;
+    justify-content:space-between;
+    font-family:'Open Sans', sans-serif;
+    }
+
+    .navbar a {
+    float: left;
+    display: block;
+    color: #FFE7E7;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+    }
+
+    .navbar a:hover {
+    color: #FFD700;
+    }
+
+    .navbar a.active {
+    color: #FFD700;
+    }
+
+    .main {
+    padding: 16px;
+    margin-bottom: 30px;
+    }
+    * {
+    box-sizing: border-box;
+}
+body {
+    margin: 0;
+    background-color: #FFF1F1;
+    overflow-x: hidden;
+}
+ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+a {
+    text-decoration: none;
+}
+.navtop{
+    display: flex;
+    background-color: #602147;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height:60px;
+    justify-content: center;
+    align-items: center;
+
+}
+.logo_nav_top{
+    height: 80%;
+
+}
+.your_profile{
+font-size:x-large;
+text-align: center;
+color: #602147;
+font-family: 'Lora', sans-serif;
+font-weight: bold; 
+padding-top: 90px; 
+margin-bottom: 30px;
+}
+.appointmentform{
+    width: auto;
+    height: auto;
+}
+.profile-box {
+display: flex;
+justify-content: space-between;
+align-items: center;
+background-color: #ffecec;
+padding: 10px 20px;
+border-radius: 10px;
+border: 1px solid #ccc;
+width: 85%;
+height: 90%;
+box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+margin: 0 auto; /* Add this line */
+}
+.profile-box1 {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #ffecec;
+    padding: 10px 20px;
+    border-radius: 10px;
+    border: 1px solid #ccc;
+    width: auto;
+    height: auto;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin: 0 auto; /* Center the container */
+    flex-wrap: wrap; /* Allow items to wrap if they exceed the container width */
+    gap: 10px; /* Add spacing between items */
+    box-sizing: border-box; /* Ensure padding and border are included in the width/height */
+    max-width: 100%; /* Prevent the container from growing too large */
+    overflow: hidden; /* Prevent overflowing content */
+}
+
+
+.profile-name {
+    font-size: 18px;
+    color: #000;
+    height: 40px;font-family: 'Poppins', sans-serif;
+}
+.edit-button {
+    background: none;
+    border: none;
+    color: #000;
+    cursor: pointer;
+    font-size: 18px;
+}
+
+.edit-button:hover {
+    color: #555; /* Change color on hover */
+}
+
+.edit-button:focus {
+    outline: none;
+}
+.pencil{
+    color: #602147;
+}
+.line1{
+    margin-top: 50px;
+}
+/* Accordion */
+.accordion-menu {
+width: 90%;
+margin: 10px auto 20px;
+border-radius: 4px;
+}
+.accordion-menu li.open .dropdownlink {
+color: #602147;
+.fa-chevron-down {
+    transform: rotate(180deg);
+}
+}
+.accordion-menu li:last-child .dropdownlink {
+border-bottom: 0;
+}
+.dropdownlink {
+cursor: pointer;
+display: block;
+padding: 15px 15px 15px 45px;
+font-size: 20px;    
+color: #602147;
+font-family: 'Lora', sans-serif;
+position: relative;
+transition: all 0.4s ease-out;
+i {
+    position: absolute;
+    top: 17px;
+    left: 16px;
+}
+.fa-chevron-down {
+    right: 12px;
+    left: auto;
+}
+}
+
+.submenuItems {
+display: none;
+background: #FFE7E7;
+li {
+    border: 1px solid #B6B6B6;
+    border-radius: 5px;
+}
+}
+
+.submenuItems a {
+display: block;
+color: #602147;
+padding: 12px 12px 12px 45px;
+font-family: 'Lora', sans-serif;
+text-align: center;
+transition: all 0.4s ease-out;
+&:hover {
+    background-color: #602147;
+    color: #FFD700;
+}
+}
+.pets_profile a{
+    font-family: 'Sniglet', cursive;
+    color: #602147;
+    
+
+}
+.pets_profile{
+    visibility: hidden;
+    display: none;
+}
+.line2{
+    margin-top: 200px;
+
+}
+.Log_out1{
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: 2rem;
+
+}
+.Log_out_mobile{
+    border: transparent;
+    background-color: transparent;
+    font-size: 20px;
+    margin-left: 40px;
+    font-family: 'Lora', sans-serif;
+    color: #602147;
+    cursor: pointer;
+}
+.log_out_icon{
+    padding-right: 10px;
+}
+.View_button{
+    border: transparent;
+    background-color: transparent;
+    cursor: pointer;
+    font-family: canda;
+    color: #602147;
+    font-size: 20px;
+}
+.popup {
+    display: none;
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    width: 80%;
+    height: 40%;
+    transform: translate(-50%, -50%);
+    border-radius: 5px;
+    padding: 20px;
+    background-color: #FFE7E7;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+.overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+}
+.close-button {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: none;
+    border: none;
+    font-size: 20px;
+    cursor: pointer;
+}
+.text{
+    font-family: canda;
+    font-size: 20px;
+    width: 50%;
+}
+.first{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+
+
+}
+.second{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.third{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+.petname{
+    font-family: 'Sniglet', cursive;
+    font-size: 15px;
+}
+.petsalon{
+    font-family: 'Sniglet', cursive;
+    font-size: 15px;
+}
+.services{
+    font-family: 'Sniglet', cursive;
+    font-size: 15px;
+}
+.paymentmethod{
+    font-family: 'Sniglet', cursive;
+    font-size: 15px;
+}
+.date1{
+    font-family: 'Sniglet', cursive;
+    font-size: 15px;
+}
+.time1{
+    font-family: 'Sniglet', cursive;
+    font-size: 15px;
+}
+.first_1{
+    width:50%;
+    display: flex;
+    flex-direction: row;
+}
+.first_2{
+    width:50%;
+    display: flex;
+    flex-direction: row;
+}
+.second_1{
+    width:50%;
+    display: flex;
+    flex-direction: row;
+}
+.second_2{
+    width:50%;
+    display: flex;
+    flex-direction: row;
+}
+.third_1{
+    width:50%;
+    display: flex;
+    flex-direction: row;
+}
+.third_2{
+    width:50%;
+    display: flex;
+    flex-direction: row;
+}
+.cancel_button{
+    background-color: #602147;
+    border: transparent;
+    border-radius: 5px;
+    height: 15%;
+    color: #FFF1F1;
+    font-family:'Open Sans', sans-serif;
+    position: absolute;
+    right: 50px;
+}
+/* POP UP FOR HISTORY */
+
+.View_button1{
+    border: transparent;
+    background-color: transparent;
+    cursor: pointer;
+    font-family: canda;
+    color: #602147;
+    font-size: 20px;
+}
+.popup1 {
+    display: none;
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    width: 80%;
+    height: auto;
+    transform: translate(-50%, -50%);
+    border-radius: 5px;
+    padding: 20px;
+    background-color: #FFE7E7;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+.overlay1 {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+}
+.close-button1 {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: none;
+    border: none;
+    font-size: 20px;
+    cursor: pointer;
+}
+.text1{
+    font-family: 'Lora', sans-serif;
+    font-size: 15px;
+    width: 50%;
+}
+.first1{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+
+
+}
+.second2{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.third3{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+.fourth{
+    
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+
+}
+.status{
+    width: 50%;
+    font-family: 'Poppins', sans-serif;
+
+}
+.petname1{
+    font-family: 'Poppins', sans-serif;
+    font-size: 15px;
+}
+.petsalon1{font-family: 'Poppins', sans-serif;
+    font-size: 15px;
+}
+.services2{font-family: 'Poppins', sans-serif;
+    font-size: 15px;
+}
+.paymentmethod2{font-family: 'Poppins', sans-serif;
+    font-size: 15px;
+}
+.date13{font-family: 'Poppins', sans-serif;
+    font-size: 15px;
+}
+.time13{font-family: 'Poppins', sans-serif;
+    font-size: 15px;
+}
+.first_11{
+    width:50%;
+    display: flex;
+    flex-direction: row;
+}
+.first_21{
+    width:50%;
+    display: flex;
+    flex-direction: row;
+}
+.second_12{
+    width:50%;
+    display: flex;
+    flex-direction: row;
+}
+.second_22{
+    width:50%;
+    display: flex;
+    flex-direction: row;
+}
+.third_13{
+    width:50%;
+    display: flex;
+    flex-direction: row;
+}
+.third_23{
+    width:50%;
+    display: flex;
+    flex-direction: row;
+}
+
+.fourth{
+    
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+
+}.fourth_13{
+    width:50%;
+    display: flex;
+    flex-direction: row;
+}
+.fourth_23{
+    width:50%;
+    display: flex;
+    flex-direction: row;
+}
+
+    }
+    @media  (min-width: 992px) {
+      .header{visibility:block;}
+      .navbar{
+        visibility: hidden;
+        display:none;
+      }
+* {
+    box-sizing: border-box;
+}
+body {
+    margin: 0;
+    background-color: #FFF1F1;
+}
+ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+a {
+    text-decoration: none;
+}
+.navtop{
+    visibility: hidden;
+    display: none;
+}
+.logo {
+    margin: 0;
+    font-size: 1.45rem;
+    vertical-align: middle; /* Align the logo vertically */
+}
+.main-nav {
+    display: flex;
+    justify-content: flex-end; /* Align menu items to the right */
+    align-items: center; /* Center vertically */
+    
+    font-family:'Open Sans', sans-serif;
+}
+
+.main-nav a {
+    padding: 10px 15px;
+    text-transform: uppercase;
+    text-align: center;
+    display: block;
+    color: #FBF8DD;
+    font-size: 0.99rem;
+}
+.main-nav a:hover {
+    color: #CAA6A6;
+}
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center; 
+    padding: 0.01em 1rem; 
+    background-color: #602147;
+    border-radius: 5px;
+    box-shadow: 0px 0px 14px 0px rgba(0,0,0,0.75);
+    height: 70px;
+    width: 100%;
+    position: fixed;
+    top: 0;
+}
+.logo{
+    height: 40px;
+}
+.book_button a button {
+    background-color: #FFD700; 
+    color: #602147; 
+    border-radius: 3px;
+    border: none; 
+    height: 30px;
+        font-family:'Open Sans', sans-serif;
+    cursor: pointer; 
+    transition: background-color 0.3s, transform 0.1s;
+}
+
+.book_button a button:hover {
+    background-color: rgb(255, 166, 2); 
+}
+
+.book_button a button:active {
+    background-color: #ffea00; 
+    transform: scale(0.95); 
+}
+
+.circle-icon {
+    background-color: #BFBDBC; 
+    color: white; 
+    border-radius: 50%; 
+    padding: 10px; 
+    font-size: 20px; 
+    width: 40px; 
+    height: 40px; 
+    display: flex; 
+    align-items: center; 
+    justify-content: center; 
+}
+.dropdown {
+position: relative;
+display: inline-block;
+}
+.dropdown-content {
+display: none;
+position: absolute;
+background-color: #FFD700;
+min-width: 160px;
+box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+right: 20px;
+font-family: 'Open Sans', sans-serif;
+border-radius: 5px;
+}
+.dropdown-content a {
+color: black;
+padding: 12px 16px;
+text-decoration: none;
+display: block;
+}
+.dropdown-content a:hover {
+background-color: #602147;
+color: #FBF8DD;
+}
+.dropdown:hover .dropdown-content {
+display: block;
+}
+.your_profile{
+font-size:xxx-large;
+text-align: center;
+color: #602147;
+font-family: 'Lora', sans-serif;
+font-weight: bold;
+padding-top: 100px;
+margin-bottom: 40px;
+}
+.appointmentform{
+    width: auto;
+    height: auto;
+}
+.profile-box {
+display: flex;
+justify-content: space-between;
+align-items: center;
+background-color: #ffecec;
+padding: 10px 20px;
+border-radius: 10px;
+border: 1px solid #ccc;
+width: 85%;
+height: 90%;
+box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+margin: 0 auto; /* Add this line */
+}
+.profile-box1 {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #ffecec;
+    padding: 10px 20px;
+    border-radius: 10px;
+    border: 1px solid #ccc;
+    width: auto;
+    height: auto;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin: 0 auto; /* Add this line */
+    }
+
+.profile-name {
+    font-size: 18px;
+    color: #000;
+    height: 40px;font-family: 'Poppins', sans-serif;
+}
+.edit-button {
+    background: none;
+    border: none;
+    color: #000;
+    cursor: pointer;
+    font-size: 18px;
+}
+
+.edit-button:hover {
+    color: #555; /* Change color on hover */
+}
+
+.edit-button:focus {
+    outline: none;
+}
+.pencil{
+    color: #602147;
+}
+.line1{
+    margin-top: 50px;
+}
+/* Accordion */
+.accordion-menu {
+width: 90%;
+margin: 60px auto 20px;
+border-radius: 4px;
+}
+.accordion-menu li.open .dropdownlink {
+color: #602147;
+.fa-chevron-down {
+    transform: rotate(180deg);
+}
+}
+.accordion-menu li:last-child .dropdownlink {
+border-bottom: 0;
+}
+.dropdownlink {
+cursor: pointer;
+display: block;
+padding: 15px 15px 15px 45px;
+width: 90%;
+font-size: 20px;    
+color: #602147;
+font-family: 'Lora', sans-serif;
+
+position: relative;
+transition: all 0.4s ease-out;
+i {
+    position: absolute;
+    top: 17px;
+    left: 16px;
+}
+.fa-chevron-down {
+    right: 12px;
+    left: auto;
+}
+}
+
+.submenuItems {
+display: none;
+background: #FFE7E7;
+li {
+    border: 1px solid #B6B6B6;
+    border-radius: 5px;
+}
+}
+
+.submenuItems a {
+display: block;
+color: #602147;
+padding: 12px 12px 12px 45px;
+font-family: 'Lora', sans-serif;
+text-align: center;
+transition: all 0.4s ease-out;
+&:hover {
+    background-color: #602147;
+    color: #FFD700;
+}
+}
+.pets_profile a{
+    color: #602147;
+
+
+}
+.line2{
+    visibility: hidden;
+    display: none;
+}
+.Log_out1{
+    visibility: hidden;
+    display: none;
+
+}
+.View_button{
+    border: transparent;
+    background-color: transparent;
+    cursor: pointer;
+    font-family: canda;
+    color: #602147;
+    font-size: 20px;
+}
+.popup {
+    display: none;
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    width: 80%;
+    height: 40%;
+    transform: translate(-50%, -50%);
+    border-radius: 5px;
+    padding: 20px;
+    background-color: #FFE7E7;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+.overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+}
+.close-button {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: none;
+    border: none;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.first{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+
+
+}
+.second{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.third{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+.petname{font-family: 'Poppins', sans-serif;
+    font-size: 20px;
+}
+.petsalon{font-family: 'Poppins', sans-serif;
+    font-size: 20px;
+}
+.services{font-family: 'Poppins', sans-serif;
+    font-size: 20px;
+}
+.paymentmethod{font-family: 'Poppins', sans-serif;
+    font-size: 20px;
+}
+.date1{font-family: 'Poppins', sans-serif;
+    font-size: 20px;
+}
+.time1{font-family: 'Poppins', sans-serif;
+    font-size: 20px;
+}
+.first_1{
+    width:50%;
+    display: flex;
+    flex-direction: row;
+}
+.first_2{
+    width:50%;
+    display: flex;
+    flex-direction: row;
+}
+.second_1{
+    width:50%;
+    display: flex;
+    flex-direction: row;
+}
+.second_2{
+    width:50%;
+    display: flex;
+    flex-direction: row;
+}
+.third_1{
+    width:50%;
+    display: flex;
+    flex-direction: row;
+}
+.third_2{
+    width:50%;
+    display: flex;
+    flex-direction: row;
+}
+
+.fourth{
+    
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+
+}.fourth_13{
+    width:50%;
+    display: flex;
+    flex-direction: row;
+}
+.fourth_23{
+    width:50%;
+    display: flex;
+    flex-direction: row;
+}
+/* POP UP FOR HISTORY */
+
+.View_button1{
+    border: transparent;
+    background-color: transparent;
+    cursor: pointer;
+    font-family: canda;
+    color: #602147;
+    font-size: 20px;
+}
+.popup1 {
+    display: none;
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    width: 80%;
+    height: auto;
+    transform: translate(-50%, -50%);
+    border-radius: 5px;
+    padding: 20px;
+    background-color: #FFE7E7;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+.overlay1 {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+}
+.close-button1 {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: none;
+    border: none;
+    font-size: 20px;
+    cursor: pointer;
+}
+.text1{
+    font-family: 'Lora', sans-serif;
+    font-size: 20px;
+    width: 50%;
+}
+.first1{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+
+
+}
+.second2{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.third3{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+.fourth{
+    
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+
+}
+.status{
+    width: 50%;
+    font-family: 'Poppins', sans-serif;
+
+}
+.petname1{font-family: 'Poppins', sans-serif;
+    font-size: 20px;
+}
+.petsalon1{font-family: 'Poppins', sans-serif;
+    font-size: 20px;
+}
+.services2{font-family: 'Poppins', sans-serif;
+    font-size: 20px;
+}
+.paymentmethod2{font-family: 'Poppins', sans-serif;
+    font-size: 20px;
+}
+.date13{font-family: 'Poppins', sans-serif;
+    font-size: 20px;
+}
+.time13{font-family: 'Poppins', sans-serif;
+    font-size: 20px;
+}
+.first_11{
+    width:50%;
+    display: flex;
+    flex-direction: row;
+}
+.first_21{
+    width:50%;
+    display: flex;
+    flex-direction: row;
+}
+.second_12{
+    width:50%;
+    display: flex;
+    flex-direction: row;
+}
+.second_22{
+    width:50%;
+    display: flex;
+    flex-direction: row;
+}
+.third_13{
+    width:50%;
+    display: flex;
+    flex-direction: row;
+}
+.third_23{
+    width:50%;
+    display: flex;
+    flex-direction: row;
+}
+.cancel_button{
+    background-color: #602147;
+    border: transparent;
+    border-radius: 5px;
+    height: 15%;
+    color: #FFF1F1;
+    font-family:'Open Sans', sans-serif;
+    position: absolute;
+    right: 50px;
+}
+    }

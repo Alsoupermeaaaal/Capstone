@@ -1,0 +1,475 @@
+/* Banner Image */
+.full-width-image-container {
+    position: block;
+    width: 100%;
+    max-width: 100%; /* Adjust this value to reduce the size of the image */
+    margin: 0 auto; /* Centers the image horizontally */
+}
+
+.full-width-image-container img {
+    width: 100%;
+    height: 50%;
+    display: block;
+}
+
+.text-overlay {
+    position: absolute;
+    top: 50%;
+    left: 5%;
+    transform: translateY(-50%);
+    color: white;
+    text-align: left;
+}
+
+.text-overlay h1, h2 {
+    font-size: 3rem;
+    margin-left: 50px;
+    font-family: 'Lora', serif;
+    font-weight: 700;
+}
+
+.text-overlay  h3 {
+    font-size: 3rem;
+    margin-left: 50px;
+    font-family: 'Lora', serif;
+    font-weight: 700;
+    color:#602147;
+}
+
+
+
+/* Tables */
+
+.service-container h2{
+    text-align: left;
+    margin-left: 5rem;
+    margin-top: 2rem;
+    font-family: 'Lora', serif;
+}
+
+.service-header {
+    display: flex;
+    align-items: center;
+}
+
+
+
+
+/* Card */
+
+.price-cards-container {
+  display: flex;
+  gap: 20px; /* Space between cards */
+  justify-content: center; /* Center the cards in the container */
+  margin-top: 20px;
+
+}
+
+.price-card {
+  font-family: 'Poppins', sans-serif;
+  width: 300px; /* Adjust width as needed */
+  border: 2px solid #D3B8AE; /* Border color similar to the card's background */
+  border-radius: 10px; /* Rounded corners */
+  background-color: #FDF4F4; /* Light pink background */
+  overflow: hidden; /* To ensure content stays within rounded corners */
+}
+
+.card-header1 {
+  background-color: #8B3E2F; /* Dark brown header background */
+  color: #FDF4F4; /* White text */
+  text-align: left;
+  padding: 10px 10px;
+  font-size: 18px; /* Adjust font size as needed */
+  font-weight: 600; /* Bold font weight */
+  font-family: 'Lora', serif;
+}
+.card-header2 {
+  background-color:#fed411;/* Dark brown header background */
+  color: #FDF4F4; /* White text */
+  text-align: left;
+  padding: 10px 10px;
+  font-size: 18px; /* Adjust font size as needed */
+  font-weight: 600; /* Bold font weight */
+  font-family: 'Lora', serif;
+}
+
+.card-header3 {
+  background-color: #cc6d29; /* Dark brown header background */
+  color: #FDF4F4; /* White text */
+  text-align: left;
+  padding:10px 10px;
+  font-size: 18px; /* Adjust font size as needed */
+  font-weight: 600; /* Bold font weight */
+  font-family: 'Lora', serif;
+}
+
+.card-header4 {
+  background-color: #dda973; /* Dark brown header background */
+  color: #FDF4F4; /* White text */
+  text-align: left;
+  padding: 10px 10px;
+  font-size: 18px; /* Adjust font size as needed */
+  font-weight: 600; /* Bold font weight */
+  font-family: 'Lora', serif;
+}
+
+
+.card-content {
+  padding: 15px;
+  color: #333; /* Dark text color */
+}
+
+.card-content p {
+  display: flex;
+  justify-content: space-between;
+  margin: 5px 0;
+  font-size: 16px; /* Adjust font size as needed */
+  font-family: 'Poppins', serif;
+
+}
+
+.card-content span {
+  font-weight: 400; /* Regular font weight for both labels and prices */
+
+
+}
+.price-cards-container-wrap {
+  display: flex;
+  flex-wrap: wrap; /* Allow items to wrap to the next line */
+  gap: 20px; /* Space between cards */
+  justify-content: center; /* Center the cards in the container */
+  margin-top: 20px;
+}
+
+@media  (max-width: 991px){
+    .header{
+      visibility: hidden;
+      display:none;
+    }
+    
+    body::-webkit-scrollbar{
+     display: none;
+    margin: 0;
+    
+    
+    }
+    
+    .navbar {
+      overflow: hidden;
+      display: flex;
+      background-color: #602147;
+      position: fixed;
+      bottom: 0;
+      width: 100%;
+      height:60px;
+      align-items: center;
+      justify-content:space-between;
+      font-family:'Open Sans', sans-serif;
+      z-index: 1000;
+      }
+      
+      .navbar a {
+      float: left;
+      display: block;
+      color: #FFE7E7;
+      text-align: center;
+      text-decoration: none;
+      font-size: 17px;
+      }
+    
+        .navbar a:hover {
+        color: #FFD700;
+        }
+    
+        .navbar a.active {
+        color: #FFD700;
+        }
+    .main {
+    padding: 16px;
+    margin-bottom: 30px;
+    }
+    * {
+    box-sizing: border-box;
+}
+body {
+    margin: 0;
+    background-color: #FFF1F1;
+    overflow-x: hidden;
+    margin-bottom: 100px;
+    margin-top: 50px;
+}
+ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+a {
+    text-decoration: none;
+}
+.navtop{
+    display: flex;
+    background-color: #602147;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height:60px;
+    z-index:10;
+    justify-content: center;
+    align-items: center;
+
+}
+.logo_nav_top{
+    height: 80%;
+}
+.first{
+    visibility: hidden;
+    display: none;
+}
+
+.booking_img{
+    height: 80%;
+}
+
+
+  /* Full-width image adjustments */
+  .full-width-image-container img {
+    height: auto;
+    max-width: 100%;
+  }
+
+  .full-width-image-container{
+    position:relative;
+    background-color:#4c1d95;
+  }
+
+  .text-overlay h1, h2 {
+    font-size: 1.75rem; /* Adjusted for mobile */
+    margin-left: 10px;
+  }
+
+.text-overlay h3{
+  margin-left: 5px;
+}
+
+  .text-overlay .btn {
+    font-size: 0.9rem;
+
+    margin-left: 10px;
+  }
+
+  .price-cards-container {
+  gap: 20px; /* Space between cards */
+  justify-content: center; /* Center the cards in the container */
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+}
+.dropdown1{
+  width: 70%;
+}
+.dropdown {
+    display: flex;
+    }
+    .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #FFD700;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    right: 20px;
+    font-family: 'Open Sans', sans-serif;
+    border-radius: 5px;
+    }
+    .dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    }
+    .dropdown-content a:hover {
+    background-color: #602147;
+    color: #FBF8DD;
+    }
+    .dropdown:hover .dropdown-content {
+    display: block;
+    }
+    .salonDropDown{
+        width: 70%;
+        justify-content: space-between;
+    }
+    .dropdown1 select {
+        padding: 7px; /* Optional: adjust the padding for better appearance */
+        font-family: 'Open Sans', sans-serif;
+        background-color: #ffe7e7;
+        border-color: #a6a6a6;
+        border: 5px;
+    }
+    .service-header{
+      display: flex;
+      flex-direction: row;
+      justify-content: space-around;
+      width: 100%;
+      gap: 50px;
+    }
+    
+    .service-header h2 {
+        color: #602147;
+    }
+   
+
+
+}
+
+@media  (min-width: 992px) {
+* {
+    box-sizing: border-box;
+}
+.header{visibility:block;}
+      .navbar{
+        visibility: hidden;
+        display:none;
+      }
+body {
+    margin: 0;
+    background-color: #FFF1F1;
+    overflow-x: hidden;
+}
+ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+a {
+    text-decoration: none;
+}
+.logo {
+    margin: 0;
+    font-size: 1.45rem;
+    vertical-align: middle; /* Align the logo vertically */
+}
+.main-nav {
+    display: flex;
+    justify-content: flex-end; /* Align menu items to the right */
+    align-items: center; /* Center vertically */
+    font-family:'Open Sans', sans-serif;
+}
+
+.main-nav a {
+    padding: 10px 15px;
+    text-transform: uppercase;
+    text-align: center;
+    display: block;
+    color: #FBF8DD;
+    font-size: 0.99rem;
+}
+.main-nav a:hover {
+    color: #CAA6A6;
+}
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center; 
+    padding: 0.01em 1rem; 
+    background-color: #602147;
+    border-radius: 5px;
+    box-shadow: 0px 0px 14px 0px rgba(0,0,0,0.75);
+    height: 70px;
+}
+.logo{
+    height: 40px;
+}
+.book_button a button {
+    background-color: #FFD700; 
+    color: #602147; 
+    border-radius: 3px;
+    border: none; 
+    height: 30px;
+    font-family: 'Open Sans', sans-serif;
+    cursor: pointer; 
+    transition: background-color 0.3s, transform 0.1s;
+}
+
+.book_button a button:hover {
+    background-color: rgb(255, 166, 2); 
+}
+
+.book_button a button:active {
+    background-color: #ffea00; 
+    transform: scale(0.95); 
+}
+
+.circle-icon {
+    background-color: #BFBDBC; 
+    color: white; 
+    border-radius: 50%; 
+    padding: 10px; 
+    font-size: 20px; 
+    width: 40px; 
+    height: 40px; 
+    display: flex; 
+    align-items: center; 
+    justify-content: center; 
+}
+.dropdown {
+position: relative;
+display: inline-block;
+}
+.dropdown-content {
+display: none;
+position: absolute;
+background-color: #FFD700;
+min-width: 160px;
+box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+right: 20px;
+font-family: 'Open Sans', sans-serif;
+border-radius: 5px;
+}
+.dropdown-content a {
+color: black;
+padding: 12px 16px;
+text-decoration: none;
+display: block;
+}
+.dropdown-content a:hover {
+background-color: #602147;
+color: #FBF8DD;
+}
+.dropdown:hover .dropdown-content {
+display: block;
+}
+.logo_nav_top{
+    visibility: hidden;
+    display: none;
+
+}
+.navbar{
+    visibility: hidden;
+    display: none;
+}
+
+.dropdown1 select {
+    padding: 7px; /* Optional: adjust the padding for better appearance */
+    font-family: 'Open Sans', sans-serif;
+    background-color: #ffe7e7;
+    border-color: #a6a6a6;
+    border: 5px;
+}
+
+.service-header h2 {
+    color: #602147;
+}
+.service-header{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  width: 100%;
+}
+.navtop{
+    
+  visibility: hidden;
+  display: none;
+  }
+
+}

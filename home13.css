@@ -1,0 +1,1010 @@
+
+* {
+    box-sizing: border-box;
+}
+body {
+    margin: 0;
+    background-color: #FFF1F1;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    z-index: 10;
+}
+body::-webkit-scrollbar {
+display: none;
+}
+ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+a {
+    text-decoration: none;
+}
+.logo {
+    margin: 0;
+    font-size: 1.45rem;
+    vertical-align: middle; /* Align the logo vertically */
+}
+@media  (min-width: 992px){
+
+.main-nav {
+display: flex;
+justify-content: flex-end; /* Align menu items to the right */
+align-items: center; /* Center vertically */
+font-family: 'Open Sans', sans-serif;
+}
+
+.main-nav a {
+padding: 10px 15px;
+text-transform: uppercase;
+text-align: center;
+display: block;
+color: #FFE7E7;
+font-size: 0.99rem;
+text-decoration: none;;
+}
+.main-nav a:hover {
+color: #CAA6A6;
+}
+
+
+.header {
+display: flex;
+justify-content: space-between;
+align-items: center;
+padding: 0.01em 1rem;
+background-color: #602147;
+border-radius: 5px;
+box-shadow: 0px 0px 14px 0px rgba(0,0,0,0.75);
+height: 70px;
+
+}
+.book_button a button {
+background-color: #FFD700; 
+color: #602147; 
+border-radius: 3px;
+border: none; 
+height: 30px;
+font-family: 'Open Sans', sans-serif;
+cursor: pointer; 
+transition: background-color 0.3s, transform 0.1s;
+}
+
+.book_button a button:hover {
+background-color: rgb(255, 166, 2); 
+}
+
+.book_button a button:active {
+background-color: #ffea00; 
+transform: scale(0.95); 
+}
+
+
+.circle-icon {
+background-color: #BFBDBC;
+color: white;
+border-radius: 50%;
+padding: 10px;
+font-size: 20px;
+width: 40px;
+height: 40px;
+display: flex;
+align-items: center;
+justify-content: center;
+}
+.dropdown {
+position: relative;
+display: inline-block;
+}
+.dropdown-content {
+display: none;
+position: absolute;
+background-color: #FFD700;
+min-width: 160px;
+box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+right: 20px;
+font-family: 'Open Sans', sans-serif;
+border-radius: 5px;
+}
+.dropdown-content a {
+color: black;
+padding: 12px 16px;
+text-decoration: none;
+display: block;
+}
+.dropdown-content a:hover {
+background-color: #602147;
+color: #FBF8DD;
+}
+.dropdown:hover .dropdown-content {
+display: block;
+}
+
+/* Banner Image */
+.full-width-image-container {
+position: block;
+width: 100%;
+max-width: 100%; /* Adjust this value to reduce the size of the image */
+margin: 0 auto; /* Centers the image horizontally */
+}
+
+.full-width-image-container img {
+width: 100%;
+height: 50%;
+display: block;
+}
+
+.text-overlay {
+position: absolute;
+top: 50%;
+left: 5%;
+transform: translateY(-50%);
+color: white;
+text-align: left;
+width: 80%;
+}
+
+.text-overlay h1, h2 {
+font-size: 3rem;
+margin-left: 50px;
+font-family: 'Lora', serif;
+font-weight: 700;
+}
+
+.text-overlay  h3 {
+font-size: 3rem;
+margin-left: 3rem;
+font-family: 'Lora', serif;
+font-weight: 700;
+color:#602147;
+}
+
+.book-button{
+background-color: #602147;
+color: #FFD700;
+width: 50%;
+height: 50px;
+font-size: x-large;
+border-radius: 6px;
+font-family: 'Open Sans', sans-serif;
+margin-left:3rem;
+}
+
+
+/* Container */
+.Name{
+font-family: 'Lora', serif;
+font-size: x-large;
+color:#602147;
+text-align: left;
+}
+
+.upper-container {
+margin: 20px;
+padding-right: 10px;
+}
+.upper-container .Name h1 {
+margin-bottom: 10px;
+margin-left: 40px;
+font-weight: bold;
+
+}
+.ongoingword{
+margin: 20px;
+padding-right: 10px;
+}
+.wordon{
+margin-bottom: 10px;
+margin-left: 70px;
+font-weight: bold;
+
+font-family: 'Poppins', sans-serif;
+
+}
+
+/* Appointment Container */
+.appointment-container {
+max-width: 85%;
+margin: 0 auto;
+padding: 20px;
+display: grid;
+gap: 20px;
+}
+
+
+.booking-container {
+background-color: #fff1f1;
+border: 1px solid #ffdddd;
+border-radius: 8px;
+padding: 15px;
+width: 100%;
+transition: all 0.3s ease;
+}
+
+.booking-container:hover {
+box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.booking {
+display: flex;
+flex-direction: column;
+gap: 10px;
+}
+
+.booking-item {
+display: flex;
+justify-content: space-between;
+}
+
+.view-button {
+grid-column: span 2;
+display: inline-block;
+text-align: center;
+margin-top: 20px;
+padding: 10px 20px;
+background-color: #602147;
+font-family: 'Open Sans', sans-serif; 
+color: white;
+text-decoration: none;
+border-radius: 4px;
+transition: background-color 0.3s ease;
+}
+
+.view-button:hover {
+background-color: #602147b7;
+}
+.labels{
+font-size: 12px;
+font-family: 'Poppins', sans-serif;
+}
+.labels1{
+font-size: 12px;
+font-family: 'Poppins', sans-serif;
+}
+/* Pet Care Tips Section */
+.pet-care-tips {
+margin: 20px;
+padding-right: 10px;
+
+}
+
+.tips-paragraph{
+margin-left: 8rem;
+margin-right: 8rem;
+max-width: 85%;
+font-family: 'Poppins', sans-serif;
+}
+
+.text-tips{
+text-align: left;
+}
+
+
+.pet-care-tips h2 {
+font-size: 2.5em;
+font-family: 'Lora', serif;
+
+color: #602147;
+margin-bottom: 10px;
+margin-left: 40px;
+font-weight: bold;
+}
+
+.petsalonword{
+margin: 20px;
+padding-right: 10px;
+}
+.petsalonword h2 {
+
+font-family: 'Lora', serif;
+color: #602147;
+margin-bottom: 10px;
+margin-left: 40px;
+font-weight: bold;
+}
+
+/* Responsive Video Container */
+.video-container {
+position: relative;
+width: 85%;
+padding-top: 56.25%; /* 16:9 Aspect Ratio */
+overflow: hidden;
+margin: 0 auto; /* Center container */
+}
+
+.video-container iframe {
+position: absolute;
+top: 0;
+left: 0;
+width: 100%;
+height: 100%; /* Fill the container */
+border: 0; /* Remove default border */
+}
+
+/* Lower Container */
+
+.pet-container{
+display: flex;
+flex-direction: column;
+text-align: left;
+font-family: 'Lora', serif;
+font-size: 50px;
+color: #602147;
+align-items: start;
+justify-content: start;
+}
+
+/* Photo */
+.row{
+width: 100%;
+display: flex;
+flex-wrap: wrap;
+justify-content: space-evenly;
+margin: 2rem 0;
+
+}
+
+.square{
+width: 340px;
+height: 390px;
+position: relative;
+display: flex;
+flex-direction: column;
+align-items: end;
+border-radius: 25px;
+overflow: hidden;
+box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 10px 0px,
+rgba(0, 0, 0, 0.5) 0px 2px 25px 0px;
+background-color: #FFE7E7;
+margin: 10px;
+}
+
+.picture {
+width: 100%;
+height: 100%; /* Ensure the container takes full height */
+flex-grow: 1;
+text-align: center;
+overflow: hidden;
+cursor: pointer;
+display: flex;
+justify-content: center;
+align-items: center;
+}
+
+.name {
+display: flex;
+justify-content: center; /* Center the content of the flex container */
+align-items: center; /* Center the content vertically if needed */
+width: 100%;
+font-family: 'Lora', serif;
+}
+
+
+
+.name h2 {
+font-size: 20px;
+font-family: 'Open Sans', sans-serif;
+width: 100%;
+text-align: center; /* Center the text horizontally */
+margin: 0 auto; /* Center the h2 element itself */
+font-family: 'Lora', serif;
+
+}
+
+
+
+
+.picture > img{
+position: absolute;
+top: 40%;
+left: 50%;
+margin-bottom: 50%;
+transform: translate(-50%, -50%);
+width: 350px;
+border-radius: 10px;
+}
+
+.picture .popup {
+width: 100%;
+height: 100%;
+background-color: white;
+transform: translateY(100%);
+opacity: 0;
+transition: 1s;
+}
+
+.square:hover .popup{
+opacity: 1;
+transform: translateY(0%);
+}
+
+.popup-info{
+padding: 20px;
+}
+
+.popup-info > div{
+display: flex;
+margin-bottom: 5px;
+font-size: 15px;
+}
+
+.popup-info > div > span {
+margin: 5px 0px 5px 0px;
+text-align: start;
+}
+
+.popup-info > div > span:first-child{
+min-width: 33%;
+margin: 5px 15px 5px 0px;
+}
+
+.popup-category {
+font-weight: 500;
+}
+.text-salon{
+    font-size: 1rem;
+color: #000000;
+margin-bottom: 20px;
+font-family: 'Poppins', sans-serif;
+font-weight: 300;
+font-style: normal;
+margin-left: 8rem;
+    margin-right: 8rem;
+    max-width: 95%;
+    text-align: justify;
+}
+}
+
+
+@media  (max-width: 991px){
+.header{
+visibility: hidden;
+display:none;
+z-index: 10;
+}
+
+body::-webkit-scrollbar{
+display: none;
+margin: 0;
+
+
+}
+
+.navbar {
+overflow: hidden;
+display: flex;
+background-color: #602147;
+position: fixed;
+bottom: 0;
+width: 100%;
+height:60px;
+align-items: center;
+justify-content:space-between;
+font-family:'Open Sans', sans-serif;
+z-index: 1000;
+}
+
+.navbar a {
+float: left;
+display: block;
+color: #FFE7E7;
+text-align: center;
+text-decoration: none;
+font-size: 17px;
+}
+a
+.navbar a:hover {
+color: #FFD700;
+}
+
+.navbar a.active {
+color: #FFD700;
+}
+.main {
+padding: 16px;
+margin-bottom: 30px;
+}
+* {
+box-sizing: border-box;
+}
+body {
+margin: 0;
+background-color: #FFF1F1;
+overflow-x: hidden;
+margin-bottom: 100px;
+margin-top: 50px;
+}
+ul {
+margin: 0;
+padding: 0;
+list-style: none;
+}
+a {
+text-decoration: none;
+}
+.navtop{
+display: flex;
+background-color: #602147;
+position: fixed;
+top: 0;
+width: 100%;
+height:60px;
+z-index:10;
+justify-content: center;
+align-items: center;
+
+}
+.logo_nav_top{
+height: 80%;
+}
+.first{
+visibility: hidden;
+display: none;
+}
+
+.booking_img{
+height: 80%;
+}
+
+
+.text-overlay {
+position: absolute;
+top: 20%;
+left: 2%;
+transform: translateY(-50%);
+color: white;
+text-align: left;
+width: 90%;
+height: 50%;
+}
+
+
+
+.text-overlay  h3 {
+font-size: 25px;
+margin-left: 3rem;
+font-family: 'Lora', serif;
+font-weight: bold;
+color:#602147;
+}
+
+
+
+/* Container */
+.Name{
+font-family: 'Lora', serif;
+font-size: 100%;
+color:#602147;
+text-align: left;
+}
+
+
+.Name h1 {
+margin-bottom: 10px;
+margin-left: 40px;
+font-weight: bold;
+
+}
+
+.ongoingword{
+margin: 20px;
+padding-right: 10px;
+}
+.wordon{
+margin-bottom: 10px;
+margin-left: 70px;
+font-weight: bold;
+font-family: 'Poppins', sans-serif;
+}
+.pet-care-tips {
+    margin: 20px;
+    padding-right: 10px;
+    
+    }
+.pet-care-tips h2 {
+font-family: 'Lora', serif;
+
+color: #602147;
+margin-bottom: 10px;
+margin-left: 40px;
+font-weight: bold;
+}
+.petsalonword {
+    margin: 20px;
+    padding-right: 10px;
+    
+    }
+.petsalonword h2 {
+font-family: 'Lora', serif;
+
+color: #602147;
+margin-bottom: 10px;
+margin-left: 40px;
+font-weight: bold;
+}
+/* Appointment Container */
+.appointment-container {
+max-width: 85%;
+margin: 0 auto;
+padding: 20px;
+display: grid;
+gap: 20px;
+}
+
+
+.booking-container {
+background-color: #fff1f1;
+border: 1px solid #ffdddd;
+border-radius: 8px;
+padding: 15px;
+width: 100%;
+transition: all 0.3s ease;
+}
+
+.booking-container:hover {
+box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.booking {
+display: flex;
+flex-direction: column;
+gap: 10px;
+}
+
+.booking-item {
+display: flex;
+justify-content: space-between;
+}
+
+.view-button {
+grid-column: span 2;
+display: inline-block;
+text-align: center;
+margin-top: 20px;
+padding: 10px 20px;
+background-color: #602147;
+font-family: 'Open Sans', sans-serif; 
+color: white;
+text-decoration: none;
+border-radius: 4px;
+transition: background-color 0.3s ease;
+}
+
+.view-button:hover {
+background-color: #602147b7;
+}
+.labels{
+font-size: 12px;
+font-family: 'Poppins', sans-serif;
+}
+.labels1{
+font-size: 12px;
+font-family: 'Poppins', sans-serif;
+}
+/* Pet Care Tips Section */
+    
+
+
+
+
+
+/* Responsive Video Container */
+.video-container {
+position: relative;
+width: 80%;
+padding-top: 56.25%; /* 16:9 Aspect Ratio */
+overflow: hidden;
+margin: 0 auto; /* Center container */
+}
+
+.video-container iframe {
+position: absolute;
+top: 0;
+left: 0;
+width: 100%;
+height: 100%; /* Fill the container */
+border: 0; /* Remove default border */
+}
+
+/* Lower Container */
+
+.pet-container{
+display: flex;
+flex-direction: column;
+text-align: left;
+font-family: 'Lora', serif;
+font-size: 50px;
+color: #602147;
+align-items: start;
+justify-content: start;
+}
+
+
+
+.square{
+width: 340px;
+height: 420px;
+position: relative;
+display: flex;
+flex-direction: column;
+align-items: end;
+border-radius: 25px;
+overflow: hidden;
+box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 10px 0px,
+rgba(0, 0, 0, 0.5) 0px 2px 25px 0px;
+background-color: #FFE7E7;
+margin: 10px;
+}
+
+.picture {
+width: 100%;
+height: 100%; /* Ensure the container takes full height */
+flex-grow: 1;
+text-align: center;
+overflow: hidden;
+cursor: pointer;
+display: flex;
+justify-content: center;
+align-items: center;
+}
+
+
+.text-salon {
+font-size: 1rem;
+color: #000000;
+margin-bottom: 20px;
+font-family: 'Poppins', sans-serif;
+font-weight: 300;
+font-style: normal;
+margin-left: 8rem;
+    margin-right: 8rem;
+    max-width: 95%;
+    text-align: justify;
+
+}
+
+.picture .popup {
+width: 100%;
+height: 100%;
+background-color: white;
+transform: translateY(100%);
+opacity: 0;
+transition: 1s;
+}
+
+/* STOP */
+
+/* Full-width image adjustments */
+.full-width-image-container img {
+height: auto;
+max-width: 100%;
+}
+
+.full-width-image-container{
+position:relative;
+}
+
+.text-overlay h1, h2 {
+font-size: 25px; /* Adjusted for mobile */
+margin-left: 10px;
+font-family: 'Lora', serif;
+font-weight: bold;
+}
+
+.text-overlay h3{
+margin-left: 5px;
+}
+
+.text-overlay  {
+font-size: 0.9rem;
+margin-left: 10px;
+}
+
+
+
+/* Pet Salon */
+.row {
+display: flex;
+flex-wrap: nowrap; /* Ensure no wrapping */
+overflow-x: auto; /* Enable horizontal scrolling */
+-webkit-overflow-scrolling: touch; /* Enable smooth scrolling on iOS */
+padding: 1rem 0; /* Add some padding for better spacing */
+margin: 2rem 0;
+width: 100%;
+height: 100%;
+margin-bottom: 5rem;
+}
+
+.square {
+flex: 0 0 auto; /* Prevent flex items from shrinking or growing */
+margin-right: 1rem; /* Add some spacing between items */
+width: 300px; /* Adjust width as needed */
+height: 300px; /* Adjust height as needed */
+text-align: center;
+}
+
+.square img {
+width: 100%;
+height: 100%;
+object-fit:fill; /* Ensure images cover the container */
+}
+
+.picture {
+width: 100%;
+height: 100%; /* Ensure the container takes full height */
+flex-grow: 1;
+text-align: center;
+overflow: hidden;
+cursor: pointer;
+display: flex;
+justify-content: center;
+align-items: center;
+}
+
+
+
+.name {
+display: flex; /* Make the parent a flex container */
+justify-content: center; /* Center items horizontally */
+align-items: center; /* Center items vertically */
+width: 100%;
+height: 20%;
+}
+
+.name h2 {
+font-size: 20px;
+font-family: 'Poppins', sans-serif;
+text-align: center; /* Center the text horizontally */
+margin: 0; /* Remove default margin */
+font-family: 'Lora', serif;
+}
+
+
+*::-webkit-scrollbar-track {
+background:#FFD700;
+padding: 4px 0;
+border-radius: 10px;
+}
+
+*::-webkit-scrollbar {
+width: 10px;
+}
+*::-webkit-scrollbar-thumb {
+border-radius: 10px;
+background:#602147 ;
+border: 2px solid  #1c1531f6;
+}
+*::-webkit-scrollbar-thumb:hover {
+background-color: var(--main-color);
+}
+
+.picture > img{
+position: absolute;
+top: 40%;
+left: 50%;
+margin-bottom: 50%;
+transform: translate(-50%, -50%);
+width: 350px;
+border-radius: 10px;
+}
+
+.picture {
+position: relative; /* Ensure relative positioning for absolute child */
+}
+
+.popup {
+position: absolute; /* Position relative to the parent .picture */
+top: 0; /* Align to the top of the parent */
+left: 0; /* Align to the left of the parent */
+width: 100%; /* Take full width of the parent */
+height: 100%; /* Take full height of the parent */
+background-color: white; /* White background */
+opacity: 0; /* Initially hidden */
+transition: opacity 0.5s; /* Smooth transition for opacity change */
+pointer-events: none; /* Ensure clicks pass through initially */
+}
+
+.picture:hover .popup {
+opacity: 1; /* Show popup on hover */
+pointer-events: auto; /* Enable clicks on popup */
+}
+
+
+.square:hover .popup{
+opacity: 1;
+transform: translateY(0%);
+}
+
+.popup-info{
+padding: 20px;
+}
+
+.popup-info > div{
+display: flex;
+margin-bottom: 5px;
+font-size: 10px;
+}
+
+.popup-info > div > span {
+margin: 5px 0px 5px 0px;
+text-align: start;
+}
+
+.popup-info > div > span:first-child{
+min-width: 33%;
+margin: 5px 15px 5px 0px;
+}
+
+.popup-category {
+font-weight: 500;
+}
+
+
+.text-tips h2{
+font-size: 1.5rem;
+margin-left: 10px;
+}
+
+.tips-paragraph {
+    margin-left: 2.5rem;
+    margin-right: 2.5rem;
+    max-width: 85%;
+    text-align: justify;
+font-family: 'Poppins', sans-serif;
+}
+
+.text-salon{margin-left: 2.5rem;
+    margin-right: 2.5rem;
+    max-width: 85%;
+    text-align: justify;
+font-family: 'Poppins', sans-serif;
+}
+
+.main-content {
+padding: 20px;
+}
+
+.upper-container{
+margin-top: 1rem;
+margin-left: 20px;
+}
+
+.book-button{
+background-color: #602147;
+color: #FFD700;
+width: 40%;
+height: 50%;
+font-size:15px;
+border-radius: 5px;
+font-family: 'Open Sans', sans-serif;
+margin-left:1rem;
+}
+
+
+}
+/* Min width 992px */
+@media (min-width: 992px) {
+/* Card layout for larger screens */
+.header {
+visibility: block;
+}
+
+.navbar {
+visibility: hidden;
+display: none;
+}
+.logo_nav_top{
+visibility: hidden;
+display: none;
+
+}
+.navtop{
+    
+visibility: hidden;
+display: none;
+}
+
+.logo{
+height: 40px;
+}
+}
