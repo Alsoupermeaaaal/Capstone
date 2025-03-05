@@ -185,6 +185,7 @@ $conn->close();
         <option value="ongoing">Ongoing</option>
         <option value="completed">Completed</option>
         <option value="cancelled">Cancelled</option>
+        <option value="cancelled">View All Report</option>
     </select>
 
     <button type="submit" class="btn">Generate Report</button>

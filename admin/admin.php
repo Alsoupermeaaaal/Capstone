@@ -179,9 +179,10 @@ $conn->close();
                     <th>Date</th>
                     <th>Time</th>
                     <th>Payment Method</th>
+                    <th>Payment Note</th>
+                    <th>Payment Status</th>
                     <th>Total Fees</th>
                     <th>Status</th>
-                    <th>Payment Note</th>
                     <th>Action</th>
                 </tr>
             </thead>
@@ -204,6 +205,8 @@ $conn->close();
                     <th>Breed</th>
                     <th>Email Address</th>
                     <th>Phone Number</th>
+                    
+
                 </tr>
                 <tbody id="patients-table-body">
                     <!-- Patients data will be displayed here -->
@@ -214,48 +217,94 @@ $conn->close();
 
     <script>
     const appointmentsTableBody = document.getElementById("appointments-table-body");
-    const activeApptsCount = document.querySelector('.number_appts');
-    const activePntsCount = document.querySelector('.number_pnts');
+const activeApptsCount = document.querySelector('.number_appts');
+const activePntsCount = document.querySelector('.number_pnts');
 
-    fetch('fetch_ongoing_appointments.php')
-        .then(response => {
-            if (!response.ok) {
-                throw new Error('Network response was not ok');
-            }
-            return response.json();
-        })
-        .then(data => {
-            console.log('Fetched Data:', data);
-            appointmentsTableBody.innerHTML = '';
-            activeApptsCount.textContent = data.ongoing_count;
+fetch('fetch_ongoing_appointments.php')
+    .then(response => {
+        if (!response.ok) {
+            throw new Error('Network response was not ok');
+        }
+        return response.json();
+    })
+    .then(data => {
+        console.log('Fetched Data:', data);
+        appointmentsTableBody.innerHTML = '';
+        activeApptsCount.textContent = data.ongoing_count;
 
-            if (Array.isArray(data.appointments) && data.appointments.length > 0) {
-                data.appointments.forEach(appointment => {
-                    const row = document.createElement("tr");
-                    const formattedTime = new Date(`1970-01-01T${appointment.time}`).toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' });
-                    row.innerHTML = `
-                        <td>${appointment.bookid}</td>
-                        <td>${appointment.pet_name}</td>
-                        <td>${appointment.owner_name}</td>
-                        <td>${appointment.service_names}</td>
-                        <td>${appointment.date}</td>
-                        <td>${formattedTime}</td>
-                        <td>${appointment.paymentmethod}</td>
-                        <td>${appointment.paymentprice}</td>
-                        <td>
-                            ${
-                                appointment.is_cancelled == 1 
-                                ? 'Cancelled' 
-                                : (appointment.is_cancelled == 0 && appointment.status === "Ongoing" ? 'Ongoing' : 'Completed')
-                            }
-                        </td>
-                    `;
-                    appointmentsTableBody.appendChild(row);
+        if (Array.isArray(data.appointments) && data.appointments.length > 0) {
+            data.appointments.forEach(appointment => {
+                const row = document.createElement("tr");
+                const formattedTime = new Date(`1970-01-01T${appointment.time}`).toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' });
+
+                row.innerHTML = `
+                    <td>${appointment.bookid}</td>
+                    <td>${appointment.pet_name}</td>
+                    <td>${appointment.owner_name}</td>
+                    <td>${appointment.service_names}</td>
+                    <td>${appointment.date}</td>
+                    <td>${formattedTime}</td>
+                    <td>${appointment.paymentmethod}</td>
+                    <td>
+                        <input type="text" class="payment-input" data-id="${appointment.id}" value="${appointment.paymentprice}">
+                    </td>
+                    <td>
+                        <select class="status-dropdown" data-id="${appointment.id}">
+                            <option value="Paid" ${appointment.status === "Paid" ? "selected" : ""}>Paid</option>
+                            <option value="Unpaid" ${appointment.status === "Unpaid" ? "selected" : ""}>Unpaid</option>
+                        </select>
+                    </td> 
+                    <td>${appointment.paymentprice}</td> 
+                    <td>
+                        <select class="status-dropdown" data-id="${appointment.id}">
+                            <option value="Ongoing" ${appointment.status === "Ongoing" ? "selected" : ""}>Ongoing</option>
+                            <option value="Completed" ${appointment.status === "Completed" ? "selected" : ""}>Completed</option>
+                            <option value="Cancelled" ${appointment.is_cancelled == 1 ? "selected" : ""}>Cancelled</option>
+                            <option value="Waiting" ${appointment.is_cancelled == 1 ? "selected" : ""}>Waiting</option>
+                        </select>
+                    </td> 
+                    <td>
+                        <button class="edit-price-btn" data-id="${appointment.id}">
+                            Update 
+                        </button>
+                    </td>
+                `;
+
+                appointmentsTableBody.appendChild(row);
+            });
+
+            // Attach event listeners to update the database when the button is clicked
+            document.querySelectorAll('.edit-price-btn').forEach(button => {
+                button.addEventListener('click', function () {
+                    const appointmentId = this.getAttribute('data-id');
+                    const inputField = document.querySelector(`.payment-input[data-id='${appointmentId}']`);
+                    const newPrice = inputField.value;
+
+                    fetch('update_payment.php', {
+                        method: 'POST',
+                        headers: {
+                            'Content-Type': 'application/json'
+                        },
+                        body: JSON.stringify({ id: appointmentId, paymentprice: newPrice })
+                    })
+                    .then(response => response.json())
+                    .then(result => {
+                        if (result.success) {
+                            alert('Payment price updated successfully!');
+                        } else {
+                            alert('Error updating payment price.');
+                        }
+                    })
+                    .catch(error => {
+                        console.error('Error:', error);
+                    });
                 });
-            } else {
-                appointmentsTableBody.innerHTML = '<tr><td colspan="9">No ongoing or completed appointments found.</td></tr>';
-            }
-        })
+            });
+        } else {
+            appointmentsTableBody.innerHTML = '<tr><td colspan="9">No ongoing or completed appointments found.</td></tr>';
+        }
+    })
+
         .catch(error => {
             console.error('There was a problem with the fetch operation:', error);
         });
@@ -303,6 +352,7 @@ $conn->close();
         })
         .catch(error => console.error('Error fetching average rating:', error));
     </script>
+
 </body>
 </html>
 
